@@ -74,6 +74,4 @@ The project is structured as follows:
 
 Contributions are welcome! Please read our contributing guidelines for details on how to contribute to this project.
 
-## License
 
-This project is [UNLICENSED]. It's private and proprietary.
