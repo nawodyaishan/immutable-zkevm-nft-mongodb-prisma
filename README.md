@@ -1,73 +1,79 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Immutable zkEVM NestJS Project
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This project, named "Immutable zkEVM NestJS", is a NestJS-based application designed to interact with Ethereum smart contracts, focusing on NFT minting and user authentication. It leverages the power of zkEVM for enhanced privacy and scalability in Ethereum transactions.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Features
 
-## Description
+- **NFT Minting**: Allows minting NFTs to a specified recipient.
+- **Authentication**: Support for user signup and authentication.
+- **User Inventory**: Fetches the inventory of NFTs owned by a user.
+- **List NFT Owners**: Lists owners of NFTs for a specific contract.
+- **Supported Chains**: Lists supported blockchain networks.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Getting Started
 
-## Installation
+### Prerequisites
+
+- Node.js (version specified in `package.json` or later)
+- PNPM package manager
+- An instance of Prisma-compatible database
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-$ yarn install
+git clone <repository-url>
 ```
 
-## Running the app
+2. Navigate to the project directory:
 
 ```bash
-# development
-$ yarn run start
-
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
+cd immutable-zkevm-nestjs
 ```
 
-## Test
+3. Install dependencies using PNPM:
 
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+pnpm install
 ```
 
-## Support
+4. Set up your environment variables:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Create a `.env` file in the root directory. Refer to the `.env.example` for required variables.
 
-## Stay in touch
+5. Initialize the database:
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```bash
+pnpm run db:sync
+```
+
+### Running the Application
+
+To run the application in development mode:
+
+```bash
+pnpm run dev
+```
+
+For production mode:
+
+```bash
+pnpm run start:prod
+```
+
+## Project Structure
+
+The project is structured as follows:
+
+- `src/`: Source code of the application, including modules, services, and controllers.
+- `prisma/`: Prisma schema and sub-schema files for database models.
+- `test/`: Contains e2e tests for the application.
+
+## Contributing
+
+Contributions are welcome! Please read our contributing guidelines for details on how to contribute to this project.
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is [UNLICENSED]. It's private and proprietary.
